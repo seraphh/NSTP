@@ -1,0 +1,33 @@
+{% extends "Views/base.html" %}
+
+
+{% block title %} NSTP library {% endblock title %} 
+
+
+{% block content %} 
+
+{% for title in titles %}
+
+<div class="card" style="width: 100vw;">
+    <div class="card-body">
+      <h5 class="card-title mb-1">{{title.title}}</h5>
+  
+  
+      <h6 class="text-muted"> {{title.author}},{{title.title}}, Retrieved from: <a href="{{title.link}}">{{title.link}}</a></h6>
+   
+      </h6>
+  
+      <br>
+    
+      <a href="/view?book={{title.pdf.url}}" class="card-link mx-1">Read</a>
+  <a href="/addreadlist/{{i.bookname}}" class="card-link mx-2">Read Later</a>
+  
+  
+  
+    </div>
+  </div>
+  
+
+
+{% endfor %}
+{% endblock content %}

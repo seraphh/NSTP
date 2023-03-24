@@ -5,9 +5,30 @@
 
 
 {% block content %} 
+<div class ="d-flex flex-column min-vh-100 justify-content-center align-items-center">  
+    <form action = "/search_title" method = "post">
+        {% csrf_token %}
+     <div class="form-row align-items-center">
+     
+        <h3 class="font-monospace">Lorem ipsum dolor</h3>
+        <small class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit.</small>
+       <div class="col-md-12 mb-2">
+       
+       </div>
+       <div class="col-md-12 mb-2 input-group">
+        {{form.title}} 
+        <span class="input-group-btn">
+            
+            <button type="submit" class="btn btn-secondary">Search Title</button>
+        </span>
+       
+       </div>
+       
+       
+   </form>
+   </div>
+   
 
-<h1>Hello, world this is the index page.</h1>
-<p>Lorem Ipsum</p>
 
 
 {% endblock content %}
